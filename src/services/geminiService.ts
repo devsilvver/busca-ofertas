@@ -1,7 +1,18 @@
 import { GoogleGenAI } from "@google/genai";
 import { ProductInputData, ProductInputType, PriceData, Coupon, DealStatus } from '../types';
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+// ATENÇÃO: Por favor, substitua "SUA_CHAVE_API_AQUI" pela sua chave de API real do Google AI Studio.
+// Este método não é seguro para produção. Em um projeto real, use variáveis de ambiente com um processo de build.
+const API_KEY = "SUA_CHAVE_API_AQUI"; 
+
+if (API_KEY === "SUA_CHAVE_API_AQUI") {
+    // Isso impede que a aplicação quebre de forma silenciosa se a chave não for inserida.
+    // O erro será visível no console do navegador.
+    throw new Error("Por favor, substitua 'SUA_CHAVE_API_AQUI' em src/services/geminiService.ts pela sua chave de API real.");
+}
+
+
+const ai = new GoogleGenAI({ apiKey: API_KEY });
 
 const fileToGenerativePart = async (base64: string, mimeType: string) => {
     return {
