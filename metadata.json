@@ -1,0 +1,5 @@
+{
+  "name": "Price Pulse - Rastreador de Preços IA",
+  "description": "Um rastreador de preços inteligente que usa IA para monitorar produtos a partir de links, descrições de texto ou fotos. Ele notifica você sobre promoções, fornece cupons de desconto e visualiza o histórico de preços para ajudá-lo a decidir o melhor momento para comprar.",
+  "requestFramePermissions": []
+}
